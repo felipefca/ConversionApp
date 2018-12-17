@@ -1,0 +1,110 @@
+<div class="container"> 
+  <br/>
+  <div class="row">
+    <div class="col-md-10 col-10">
+      <h3 class="page-title"><strong>Painel de Moedas</strong></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-8">
+      <section widget class="widget">
+        <div class="m-t-sm">
+          <div class="row margin-bottom text-left">
+            <div class="col-md-12">
+                <div class="col-md-1">
+                    <h4>De:</h4>
+                </div>
+                <div class="col-md-4">
+                    <ng-select #SelectFistCoinId [allowClear]="true" 
+                    (selected)="selectedFistCoin($event)"
+                    (removed)="removedFistCoin($event)"
+                    placeholder="Selecione a Moeda">
+                     </ng-select>
+                </div>
+                <div class="col-md-1">
+                    <h4>Para:</h4>
+                  </div>
+                  <div class="col-md-4">
+                      <ng-select #SelectSecondCoinId [allowClear]="true"
+                      (selected)="selectedSecondCoin($event)"
+                      placeholder="Selecione a Moeda">
+                       </ng-select>
+                  </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-4">
+                    <h5>Cotação: {{ sourceValue }}</h5>
+                </div>
+                <div class="col-md-1">
+                  </div>
+                  <div class="col-md-4">
+                      <h5>Cotação: {{ valueTo }}</h5>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-10 col-10">
+        <h3 class="page-title"><strong>Painel de Conversão</strong></h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-8">
+        <section widget class="widget">
+          <div class="m-t-sm">
+            <div class="row margin-bottom text-left">
+              <div class="col-md-12">
+                  <div class="col-md-1">
+                      <h4>Valor:</h4>
+                  </div>
+                  <div class="col-md-2">
+                      <input type="number" [(ngModel)]="amount">
+                  </div>
+                  <div class="col-md-1">
+                      <button type="button" class="btn btn-primary" (click)="gerarConversao(amount)" ><i class="fa fa-money"></i> Converter</button>
+                  </div>
+                  <div class="col-md-1">
+                  </div>
+                  <div class="col-md-1">
+                      <h4>Total (Arred.): </h4>
+                  </div>
+                  <div class="col-md-2">
+                      <input type="text" [(ngModel)]="totalResult">
+                  </div>
+                  <div class="col-md-1">
+                    <h4>Total: </h4>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" [(ngModel)]="totalCheio">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-10">
+          </div>
+        </div>
+      <div class="row">
+        <div class="col-xl-8">
+          <section widget class="widget">
+            <div class="m-t-sm">
+              <div class="row margin-bottom text-left">
+                <div class="col-md-12">
+                    <div class="col-md-1">
+                        <button type="button" class="btn btn-danger" (click)="clearAllOptions()" > Limpar</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+</div>

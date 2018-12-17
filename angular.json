@@ -23,7 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/toastr.css",
+              "src/assets/css/ng2-select.css"
             ],
             "scripts": []
           },
