@@ -8,7 +8,7 @@
 - Visual Studio Code
 
 ### Pré-Requisitos
-- Realize os passos da aplicação Back End: https://github.com/felipefca/copafilmes-API
+- Realize os passos da aplicação Back End: https://github.com/felipefca/ConversionAPI
 
 ### Passos
 - Clone este repositorio 
