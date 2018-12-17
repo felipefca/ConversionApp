@@ -1,6 +1,6 @@
 # ConversionApp
 
-- Aplicação Front End desenvolvida em Angular 6
+- Aplicação Front End desenvolvida em Angular 7
 - [Angular CLI](https://github.com/angular/angular-cli) version 7.0.2.
 
 ### Construído utilizando
