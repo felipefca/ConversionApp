@@ -29,6 +29,8 @@ export class HomeComponent implements OnInit {
   totalResult: string;
   totalCheio: number;
   amount: any;
+  descriptionValue: string;
+  descriptionTotal: string;
 
   constructor(private externalService: ExternalService, private router: Router, private toastr: ToastrService) { }
 
@@ -68,6 +70,8 @@ export class HomeComponent implements OnInit {
     this.totalResult = "";
     this.totalCheio = 0;
     this.amount = 0;
+    this.descriptionValue = "";
+    this.descriptionTotal = "";
   }
 
   clearAllOptions(): void {
@@ -78,6 +82,16 @@ export class HomeComponent implements OnInit {
   }
 
   gerarConversao(amount): void {
+    if (this.selectFistCoin.active.length == 0){
+      this.toastr.info('Selecione a primeira Moeda !!!');
+      return;
+    }
+
+    if (this.selectSecondCoin.active.length == 0){
+      this.toastr.info('Selecione a segunda Moeda !!!');
+      return;
+    }
+
     if (amount < 1){
       this.toastr.info('Valor Inválido !!!');
       return;
@@ -105,6 +119,9 @@ export class HomeComponent implements OnInit {
     const coinTo = this.selectSecondCoin.activeOption.id;
 
     this.gerComparativeCurrency(coinSource, coinTo);
+
+    this.descriptionValue = "Valor em: " + this.selectFistCoin.activeOption.text;
+    this.descriptionTotal = "Valor Total em: " + this.selectSecondCoin.activeOption.text;
   }
 
   removedFistCoin(value: any): void {
