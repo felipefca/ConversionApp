@@ -16,6 +16,7 @@
 - Execute o comando
 
 ```
+npm install
 ng serve --open
 ```
 
